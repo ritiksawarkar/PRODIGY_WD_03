@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
+    text-align: center;
+}
+
+.game-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    width: 350px;
+}
+
+h1 {
+    font-size: 2rem;
+    /* margin-bottom: 20px; */
+    font-weight: 600;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    border-radius: 8px;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cell:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.1);
+}
+
+.game-info {
+    margin-top: 20px;
+}
+
+#game-status {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+#win-history {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+#reset {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#reset:hover {
+    background-color: #2980b9;
+}
+
+#reset:active {
+    background-color: #1f6f9b;
+}
+
+/* Style for Game Mode Container */
+.game-mode {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Label Styling */
+.game-mode label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    margin-right: 10px;
+}
+
+/* Dropdown Styling */
+.game-mode select {
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    outline: none;
+}
+
+/* Hover and Focus Effects for Dropdown */
+.game-mode select:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+.game-mode select:focus {
+    background-color: #1f6f9b;
+}
